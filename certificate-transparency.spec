@@ -25,10 +25,10 @@
 
 Name: certificate-transparency
 Version: 1.1.1
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Auditing for TLS certificates
 License: ASL 2.0
-URL: https://%{name}.io/
+URL: https://certificate.transparency.dev
 Source0: %{git0}/archive/v%{version}.tar.gz
 BuildRequires: gcc
 BuildRequires: golang
@@ -70,5 +70,8 @@ install -p bin/* %{buildroot}%{_bindir}
 %{_bindir}/ct_server
 
 %changelog
+* Tue May 18 2021 Lokesh Mandvekar <lsm5@fedoraproject.org> - 1.1.1-2
+- update url
+
 * Tue May 18 2021 Lokesh Mandvekar <lsm5@fedoraproject.org> - 1.1.1-1
 - initial package
